@@ -1,0 +1,32 @@
+version: '3.4'
+
+services:
+
+  db:
+    container_name: postgres
+    image: postgres:11.5
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: docker
+      POSTGRES_DB: users
+      POSTGRES_PASSWORD: team4
+    ports:
+      - "5432:5432"
+
+  adminer:
+    container_name: adminer
+    image: adminer
+    restart: unless-stopped
+    ports:
+      - "8090:8080"
+
+  back:
+    container_name: back
+    image: back:latest
+    restart: unless-stopped
+    depends_on:
+      - db
+    build: .
+    ports:
+      - "8098:8098"
+      - "9001:9001"

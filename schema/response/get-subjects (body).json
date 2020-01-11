@@ -1,0 +1,15 @@
+[
+  {
+    "id": 5495,
+    "code": "ago0209",
+    "courseName": "iti0209 sissejuhatus",
+    "courseNameEng": "bigus potatus",
+    "eap": 3,
+    "semesters": "allofthem",
+    "reviews":[],
+    "comments":[],
+    "teachers":[
+      {"id":  100, "name": "Agomaster", "subjectIds":  [1, 2, 5495]}
+    ]
+  }
+]
